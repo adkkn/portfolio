@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adithya's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="favicon.png">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <a href="Adithya_Resume.pdf" class="fixed-cv-btn" id="downloadCV">
+        Download CV
+    </a>  
+    <!-- Fixed Adithya's AI Button (Top Right) -->
+<!-- AI Chatbot Button -->
+    <a class="fixed-ai-btn" onclick="toggleChatbot()">AI Chatbot</a>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbot-modal" class="chatbot-container">
+        <h3>Ask Me Anything About Adithya</h3>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-container">
+            <input type="text" id="chat-input" placeholder="Type your question..." />
+            <!-- <button onclick="sendMessage()">Send</button> -->
+            <button id="send-button">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/send-white-icon.png" alt="Send">
+            </button>
+            
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <!-- <li><a href="#courses">Courses</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        
+        <div class="hero-content">
+            <h1>Hello, I'm Adithya!</h1>
+            <h3>Software & AI Engineer</h3>
+            <br>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>Welcome to my Portfolio! I'm a Computer Science student at the American University of Sharjah currently in my final semester, with minors in Data Science and Applied Math.</p>
+            <p>I'm extremely passionate about Artificial Intelligence and its applications in the real world. I'm experienced in Machine Learning, Deep Learning, Computer Vision, LLMs, Web App Development and AI Integration. </p>
+            <p>Kindly contact me below if you're interested in collaborating!</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <!-- Section Menu Bar -->
+        <div class="section-menu-container">
+            <div class="section-menu">
+                <button class="experience-btn active" data-category="internships">Internships</button>
+                <button class="experience-btn" data-category="aus">AUS</button>
+            </div>
+        </div>
+
+        <!-- Experience Cards Container -->
+        <div class="experience-container" id="experience-container"></div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Programs</h2>
+
+        <!-- Certifications Cards Container -->
+        <div class="certifications-container" id="certifications-container"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- Section Menu Bar -->
+        <div class="section-menu-container">
+            <div class="section-menu">
+                <button class="project-btn active" data-category="ai-projects">AI Projects</button>
+                <button class="project-btn" data-category="ai-models">AI Models</button>
+                <button class="project-btn" data-category="web-dev">Web Application Development</button>
+                <button class="project-btn" data-category="app-dev">Application Development</button>
+            </div>
+        </div>
+
+        <!-- Project Cards Container -->
+        <div class="projects-container" id="projects-container"></div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+    
+        <!-- Section Menu Bar -->
+        <div class="section-menu-container">
+            <div class="section-menu">
+                <button class="section-btn active" data-category="languages">Programming Languages</button>
+                <button class="section-btn" data-category="frameworks">Frameworks</button>
+                <button class="section-btn" data-category="devtools">Developer Tools</button>
+                <button class="section-btn" data-category="libraries">Python Libraries</button>
+            </div>
+        </div>
+    
+        <!-- Skill Cards Container -->
+        <div class="skills-container" id="skills-container"></div>
+    </section>
+    
+    <section id="awards">
+        <h2>Awards & Honors</h2>
+        <div class="awards-container" id="awards-container"></div>
+    </section>
+    
+    <section id="courses">
+        <h2>Courses Completed at AUS</h2>
+    
+        <!-- Section Menu Bar -->
+        <div class="section-menu-container">
+            <div class="section-menu">
+                <button class="course-btn active" data-category="computer-science">Computer Science</button>
+                <button class="course-btn" data-category="ai">Artificial Intelligence</button>
+                <button class="course-btn" data-category="math">Mathematics</button>
+                <button class="course-btn" data-category="others">Others</button>
+            </div> 
+        </div>
+    
+        <!-- Courses Cards Container -->
+        <div class="courses-container" id="courses-container"></div>
+    </section>
+    
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Let's Connect!</h2>
+
+        <!-- Contact Details Section -->
+        <div class="contact-details-container">
+            <div class="contact-card">
+                <img src="https://img.icons8.com/ios7/512/FFFFFF/apple-phone.png" alt="Phone" class="contact-icon">
+                <p>+971 50 5017385</p>
+            </div>
+            <div class="contact-card">
+                <img src="https://openclipart.org/image/2000px/286608" alt="Email" class="contact-icon">
+                <p><a href="mailto:adithyakk2013@gmail.com">adithyakk2013@gmail.com</a></p>
+            </div>
+            <div class="contact-card">
+                <img src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="LinkedIn" class="contact-icon">
+                <p><a href="https://www.linkedin.com/in/adithya-krishnakumar" target="_blank">www.linkedin.com/in/adithya-krishnakumar</a></p>
+            </div>
+        </div>
+
+        <form action="https://formsubmit.co/adithyakk2013@gmail.com" method="POST">
+            <h3>Send Me a Message</h3>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        
+    </section>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</html>

@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url('bgpic1.png');
+    background-attachment: fixed; /* Keeps it fixed when scrolling */
+    background-size: cover; /* Ensures it covers the full screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Fixed Navigation Bar */
+.nav-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px 30px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, .active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    /* background: linear-gradient(180deg, #240046, #3c096c, #5a189a); */
+    background: url('bgpicold.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    text-align: left;
+    position: absolute;
+    top: 25%;
+    left: 30px;
+    transform: translateY(-30%);
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+/* Form Container */
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 20px;
+    padding-top: 0px;
+    border-radius: 30px;
+}
+
+/* Form Inputs & Textarea */
+form input, form textarea {
+    padding: 15px; /* Bigger padding for larger input boxes */
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1); /* Translucent input fields */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 93%;
+    outline: none;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Light white text */
+    transition: 0.3s;
+}
+
+/* Hover & Focus Effect */
+form input:hover, form textarea:hover,
+form input:focus, form textarea:focus {
+    background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+}
+
+/* Message Textarea Customization */
+form textarea {
+    resize: none; /* Allows resizing vertically only */
+    max-height: 250px; /* Max height */
+    height: 250px;
+    min-height: 100px; /* Min height */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Custom Scrollbar for Textarea */
+form textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+form textarea::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Matches form */
+    border-radius: 10px;
+}
+
+form textarea::-webkit-scrollbar-thumb {
+    background: rgba(199, 125, 255, 0.5); /* Purple scrollbar */
+    border-radius: 10px;
+}
+
+form textarea::-webkit-scrollbar-thumb:hover {
+    background: rgba(199, 125, 255, 0.8); /* Brighter purple on hover */
+}
+
+/* Redesigned Button */
+button {
+    background: rgba(255, 255, 255, 0.1); /* Translucent button */
+    padding: 12px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+button:hover {
+    background: rgba(255, 255, 255, 0.2); /* Brighter hover */
+}
+
+.hero-content{
+    h1{
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1.42rem;
+    }
+}
+
+.hero-tagline {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #8a2be2, #c77dff); /* Brighter gradient */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    white-space: nowrap;
+    animation: slide-in 1.5s ease-out forwards;
+}
+
+/* Slide-in animation */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Section Menu Bar - Styled Like Main Nav */
+.section-menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.section-menu {
+    background: rgba(138, 43, 226, 0.2); /* Purple background */
+    border-radius: 30px;
+    padding: 10px;
+    padding-top: 0px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 20px;
+}
+
+/* Common Styles for Section and Course Buttons */
+.section-menu .section-btn, .section-menu .course-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover and Active Effect */
+.section-menu .section-btn:hover, .section-menu .section-btn.active,
+.section-menu .course-btn:hover, .section-menu .course-btn.active {
+    background: rgba(199, 125, 255, 0.5); /* Lighter purple */
+}
+
+/* Skill Cards */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto; 
+    margin-right: auto; /* Centers the container itself */
+}
+
+
+/* Default style for skill cards */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 150px;
+    height: 115px; /* Default height for all cards */
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Smaller height for skill cards under the libraries category */
+.libraries-container .skill-card {
+    height: 60px; /* Smaller height for libraries */
+    padding: 10px; /* Reduce padding */
+    font-size: 14px; /* Adjust text size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Fixed Button Styling (Common for Both Buttons) */
+.fixed-cv-btn, .fixed-ai-btn {
+    position: fixed;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Translucent effect like nav buttons */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1001; /* Ensure it appears above other elements */
+    backdrop-filter: blur(10px); /* Glass effect */
+    transition: background 0.3s;
+}
+
+/* Left Position: Download CV */
+.fixed-cv-btn {
+    left: 30px;
+}
+
+/* Right Position: Adithya's AI */
+.fixed-ai-btn {
+    right: 30px;
+}
+
+/* Hover Effect (Same for Both) */
+.fixed-cv-btn:hover, .fixed-ai-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.about-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    padding: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    text-align: center;
+}
+
+/* Experience Section */
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Experience Card */
+.experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 400px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Positioning Company & Date */
+.experience-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.experience-card h4 {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.experience-card ul {
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Section Menu Bar */
+.section-menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.section-menu {
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 20px;
+}
+
+.section-menu .experience-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section-menu .experience-btn:hover, .section-menu .experience-btn.active {
+    background: rgba(199, 125, 255, 0.5);
+}
+
+.experience-card p {
+    font-weight: normal; /* Ensures normal text */
+    line-height: 1.5; /* Improves readability */
+}
+
+.experience-card h3, 
+.experience-card h4 {
+    text-align: center; /* Centers the titles */
+    margin-bottom: 5px;
+}
+
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.cert-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.experience-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 10px auto; /* Centers the image */
+    display: block;
+}
+
+/* Project Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 350px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    color: white;
+}
+
+/* Center Project Titles */
+.project-card h3 {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Project Menu Bar */
+.section-menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.section-menu {
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 20px;
+}
+
+.section-menu .project-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section-menu .project-btn:hover, .section-menu .project-btn.active {
+    background: rgba(199, 125, 255, 0.5);
+}
+
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.award-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 500px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.award-card h3, 
+.award-card h4 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.award-card p {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.award-card h4 {
+    font-style: italic; /* Makes the text italic */
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Contact Details Container */
+.contact-details-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between items */
+    margin: 50px;
+}
+
+/* Contact Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.1); /* Translucent effect */
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    text-align: center;
+    width: 200px; /* Set card width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Contact Icons */
+.contact-icon {
+    width: 80px; /* Adjust icon size */
+    height: 80px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    margin-bottom: 10px;
+}
+
+/* Contact Details Text */
+.contact-card p {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+/* Contact Links */
+.contact-card a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover Effect for Links */
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* AI Chatbot Button - Fixed Position */
+.fixed-ai-btn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.15); /* Translucent effect */
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    cursor: pointer; /* Fix cursor issue */
+    transition: background 0.3s;
+}
+
+/* Hover Effect */
+.fixed-ai-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Chatbot Modal */
+.chatbot-container {
+    position: fixed;
+    right: -400px;
+    bottom: 10px;
+    width: 350px;
+    height: 75%;
+    background: rgba(0, 0, 0, 0.75); /* Darker glass effect */
+    backdrop-filter: blur(12px);
+    color: white;
+    border-radius: 40px; /* More rounded */
+    display: flex;
+    flex-direction: column; /* Ensures elements stack properly */
+    justify-content: space-between; /* Push input area to the bottom */
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1001; /* Ensure it appears above other elements */
+    h3 {
+        margin-top: 5px;
+    }
+}
+
+/* Hide Scrollbar for Chatbot Messages */
+.chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in Edge/IE */
+}
+
+/* Hides scrollbar in Webkit-based browsers (Chrome, Safari) */
+.chatbot-messages::-webkit-scrollbar {
+    display: none;
+}
+
+/* Chat Messages */
+.chatbot-message {
+    padding: 12px 16px;  /* Increased padding for better spacing */
+    margin: 8px 0; /* Adds space between messages */
+    border-radius: 30px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 13px; /* Reduced font size */
+    text-align: left;
+    line-height: 1.5; /* Improves readability */
+}
+
+/* User Message */
+.user-message {
+    background: #0078ff;
+    align-self: flex-end;
+    text-align: left;
+    color: white;
+}
+
+/* AI Response */
+.bot-message {
+    background: rgba(255, 255, 255, 0.15);
+    align-self: flex-start;
+    color: white;
+}
+
+/* Input Box Container */
+.chatbot-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Divider */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: -20px;
+}
+
+/* Input Field */
+.chatbot-input-container input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input Placeholder */
+.chatbot-input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Style for the send button */
+.chatbot-input-container button {
+    background: #0078ff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 40px; /* Set width for circular button */
+    height: 40px; /* Set height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/* Style for the send icon */
+.chatbot-input-container button img {
+    width: 18px; /* Adjust icon size */
+    height: 18px;
+    filter: brightness(0) invert(1); /* Ensures it's white */
+}
+
+/* Hover effect */
+.chatbot-input-container button:hover {
+    background: #005bbf;
+}
