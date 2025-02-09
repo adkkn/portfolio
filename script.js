@@ -491,7 +491,7 @@ async function sendMessage() {
 
     const personalDetails = "Adithya is a Computer Science student at AUS with a strong background in AI, Machine Learning, Web Dev, and Cybersecurity. He has worked on AI-based fraud detection, NLP models, and web automation. He is currently looking for opportunities in AI research and software engineering. Born and brought up in dubai, indian, birthday: june 14th, 2003.";
 
-    const prompt = `You are an AI assistant that will talk to recruitment teams. Respond normally if the query is not related to me. Your job is to make sure that I get hired, but don't be annoying or repetitive. Be precise and to the point. Don't mention "According to his resume", or "it appears that..". Answer in 150 words maximum. Here is Adithya's resume: ${resumeContent}\n\nAdditional Info: ${personalDetails}\n\nUser Question: ${userInput}`;
+    const prompt = `You are an AI assistant that will talk to recruitment teams. Respond normally if the query is not related to me. Your job is to make sure that I get hired, but don't be annoying or repetitive. Be precise and to the point, do not use special characters or bold text. Don't mention "According to his resume", or "it appears that..". Answer in 150 words maximum. Here is Adithya's resume: ${resumeContent}\n\nAdditional Info: ${personalDetails}\n\nUser Question: ${userInput}`;
 
     // Call Gemini API
     const response = await callGemini(prompt);
@@ -508,15 +508,7 @@ function displayMessage(text, className) {
 
     function typeCharacter() {
         if (index < text.length) {
-            // Append next character
-            message.innerHTML += text[index] === "*" ? "<b>" : text[index];
-
-            // Check for Markdown bold formatting (**bold text**) and close the tag properly
-            if (text.substring(index, index + 2) === "**") {
-                message.innerHTML = message.innerHTML.slice(0, -1) + "</b>"; // Close bold tag
-                index++; // Skip extra "*"
-            }
-
+            message.innerHTML += text[index]; // Append each character
             index++;
 
             // ✅ Auto-scroll **while** typing
