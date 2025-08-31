@@ -304,13 +304,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Updated certifications with new ones from CV
 const certifications = [
-    { name: "AWS Certified AI Practitioner", provider: "Amazon Web Services", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+    { name: "AWS Certified AI Practitioner", provider: "Amazon Web Services", img: "https://img.icons8.com/m_outlined/600/FFFFFF/amazon-web-services.png" },
     { name: "Deep Learning Specialization", provider: "DeepLearning.AI", img: "https://aihubtest-bucket.s3.eu-north-1.amazonaws.com/public/storage/images/6066/https---cdn.evbuc.com-images-125559383-317212851579-1-original.20210208-232017.png" },
     { name: "Machine Learning Specialization", provider: "Stanford / DeepLearning.AI", img: "https://logos-world.net/wp-content/uploads/2021/10/Stanford-Symbol.png" },
     { name: "Microsoft Azure AI Engineer Associate", provider: "Microsoft", img: "https://cdn.prod.website-files.com/5ee732bebd9839b494ff27cd/5eef3a3260847d0d2783a76d_Microsoft-Logo-PNG-Transparent-Image.png" },
     { name: "Microsoft Azure AI Fundamentals", provider: "Microsoft", img: "https://cdn.prod.website-files.com/5ee732bebd9839b494ff27cd/5eef3a3260847d0d2783a76d_Microsoft-Logo-PNG-Transparent-Image.png" },
-    { name: "7 Data Science Courses", provider: "DataCamp", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/datacamp/datacamp-original.svg" },
-    { name: "Gen AI, Prompt Engineering, MLOps, Kubernetes, AWS, GCP", provider: "Manifold AI Learning", img: "https://cdn-icons-png.flaticon.com/128/8637/8637099.png" },
+    { name: "7 Data Science Courses", provider: "DataCamp", img: "https://images.contentstack.io/v3/assets/blt06ed128d2c76b316/bltc2ce983e7b87c1ab/66794a17a2e62608564255b8/blt387bde0da0654c08.png" },
+    { name: "Gen AI, Prompt Engineering, MLOps, Kubernetes, AWS, GCP", provider: "Manifold AI Learning", img: "https://tagmango.com/staticassets/-manifold_logo-0c136ff49b812056a24022776afc8a15.png" },
     { name: "Google Data Analytics Professional Certificate", provider: "Google", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png" },
     { name: "Exploratory Data Analysis for Machine Learning", provider: "IBM", img: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
     { name: "Inspirit AI Ambassadors Program", provider: "Inspirit AI", img: "https://hacktj.org/2021/static/media/inspiritai.ca0c8cca.png" },
@@ -443,14 +443,14 @@ document.addEventListener("DOMContentLoaded", () => {
 // Updated awards with new wins from CV
 const awards = [
     {
-        title: "1st Place Winner – Blockathon: AI for Decentralized Autonomy 2025",
-        event: "Blockathon Competition",
+        title: "1st Place Winner",
+        event: "Blockathon: AI fBloor Decentralized Autonomy 2025",
         date: "May 2025",
         details: "Independently developed a production-grade Next.js travel planning AI web app with SUI blockchain features."
     },
     {
-        title: "6th Place Winner – DragonOil AI Hackathon II - GOTECH 2025",
-        event: "DragonOil AI Hackathon",
+        title: "6th Place Winner",
+        event: "DragonOil AI Hackathon II - GOTECH 2025",
         date: "Apr. 2025",
         details: "Leveraged multiple AI algorithms to accurately estimate Surface network production flow behaviour."
     },
@@ -463,7 +463,7 @@ const awards = [
     {
         title: "Active Students' Scholarship",
         event: "AUS (Office of Student Affairs)",
-        date: "Jan. 2024 – May 2024",
+        date: "Jan. 2024",
         details: "Recognition for extensive participation in extra-curriculars and commitment in the CSE Department."
     }
 ];
