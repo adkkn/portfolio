@@ -527,7 +527,7 @@ function displayMessage(text, className) {
 }
 
 async function loadResumeText() {
-    const pdfUrl = "Adithya_Resume.pdf"; // Change this if your resume is stored elsewhere
+    const pdfUrl = "Adithya_CV.pdf"; // Change this if your resume is stored elsewhere
 
     try {
         const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
@@ -573,3 +573,4 @@ async function callGemini(prompt) {
         return "Failed to contact the Gemini API.";
     }
 }
+
