@@ -52,7 +52,7 @@ const courses = {
     ]
 };
 
-// Updated Skill Data with Image URLs for other categories
+// Updated Skill Data with new technologies from CV
 const skills = {
     languages: [
         { name: "Java", img: "https://cdn-icons-png.flaticon.com/128/226/226777.png" },
@@ -60,6 +60,7 @@ const skills = {
         { name: "C/C++", img: "https://cdn-icons-png.flaticon.com/128/6132/6132222.png" },
         { name: "SQL", img: "https://cdn-icons-png.flaticon.com/128/4248/4248443.png" },
         { name: "JavaScript", img: "https://cdn-icons-png.flaticon.com/128/919/919828.png" },
+        { name: "TypeScript", img: "https://cdn-icons-png.flaticon.com/128/5968/5968381.png" },
         { name: "HTML", img: "https://cdn-icons-png.flaticon.com/128/174/174854.png" },
         { name: "CSS", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png" },
         { name: "R", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" },
@@ -67,11 +68,15 @@ const skills = {
         { name: "Kotlin", img: "https://cdn.freebiesupply.com/logos/thumbs/2x/kotlin-1-logo.png" }
     ],
     frameworks: [
+        { name: "Next.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
         { name: "React", img: "https://cdn-icons-png.flaticon.com/128/919/919851.png" },
+        { name: "React Native", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Node.js", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" },
         { name: "Express.js", img: "https://www.manektech.com//storage/technology/image/1646733600.webp" },
+        { name: "Expo", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg" },
         { name: "Flask", img: "https://play-lh.googleusercontent.com/ekpyJiZppMBBxCR5hva9Zz1pr3MYlFP-vWTYR3eIU7HOMAmg3jCJengHJ1GFgFMyyYc" },
-        { name: "Django", img: "https://www.svgrepo.com/show/353657/django-icon.svg" }
+        { name: "Django", img: "https://www.svgrepo.com/show/353657/django-icon.svg" },
+        { name: "Tailwind CSS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" }
     ],
     devtools: [
         { name: "Git", img: "https://cdn-icons-png.flaticon.com/128/733/733553.png" },
@@ -79,13 +84,16 @@ const skills = {
         { name: "Visual Studio", img: "https://cdn-icons-png.flaticon.com/128/906/906324.png" },
         { name: "Android Studio", img: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png" },
         { name: "Eclipse", img: "https://cdn.freebiesupply.com/logos/large/2x/eclipse-11-logo-png-transparent.png" },
+        { name: "PostgreSQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
         { name: "MySQL", img: "https://cdn-icons-png.flaticon.com/128/919/919836.png" },
+        { name: "Supabase", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
         { name: "Firebase", img: "https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63018721094449d9901f5875_cff297d7.png" }
     ],
     libraries: [
-        "tensorflow",
-        "torch",
+        "pytorch",
+        "tensorflow", 
         "transformers",
+        "tokenizers",
         "scikit-learn",
         "xgboost",
         "opencv-python",
@@ -175,72 +183,84 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCourses("computer-science"); // Default category
 });
 
+// Updated experiences with current role and fixed character encoding
 const experiences = {
+    "current": [
+        {
+            title: "AI & Automation Software Engineer",
+            company: "Transmed Overseas Inc, Dubai",
+            date: "Feb. 2025 – Present",
+            details: [
+                "Built tailored software solutions that streamlined workflows and reduced manual effort across departments.",
+                "Automated Transmed's entire invoice booking process, achieving an 83% increase in processing speed.",
+                "Singlehandedly delivered an enterprise-level web platform adopted by multiple core departments, which centralized data, automated clearance workflows, and tracked live shipments."
+            ],
+            img: "https://static.wixstatic.com/media/b82a58_62883bcc5ea14dd6a9f7f696884c4f53~mv2.png/v1/fill/w_568,h_190,al_c,lg_1,q_85,enc_auto/b82a58_62883bcc5ea14dd6a9f7f696884c4f53~mv2.png"
+        }
+    ],
     "internships": [
         {
-            title: "Data Analytics, Automation & AI Intern",
+            title: "AI, Automation & Data Analytics Intern",
             company: "Transmed Overseas Inc, Dubai",
             date: "June 2024 – Aug. 2024",
             details: [
                 "Developed ML models to significantly improve sales forecasting accuracy beyond current manual forecasts.",
                 "Automated data entry and validation processes using VBA and macros, enhancing operational efficiency.",
-                "Created an AI-powered web app to streamline IT service queries, integrating OpenAI models and a Flask API with Manage Engine IT Ticketing System."
+                "Created an AI-powered web app to streamline IT service queries, incorporating various OpenAI models and Python Flask backend API integration with the Manage Engine IT Ticketing System for user convenience."
             ],
-            img: "https://static.wixstatic.com/media/b82a58_62883bcc5ea14dd6a9f7f696884c4f53~mv2.png/v1/fill/w_568,h_190,al_c,lg_1,q_85,enc_auto/b82a58_62883bcc5ea14dd6a9f7f696884c4f53~mv2.png" // ADD THIS
+            img: "https://static.wixstatic.com/media/b82a58_62883bcc5ea14dd6a9f7f696884c4f53~mv2.png/v1/fill/w_568,h_190,al_c,lg_1,q_85,enc_auto/b82a58_62883bcc5ea14dd6a9f7f696884c4f53~mv2.png"
         },
         {
             title: "AI Intern",
             company: "Smallcap.AI",
             date: "May 2024 – June 2024",
             details: [
-                "Developed generative AI NFTs on Ethereum, integrating account abstraction wallets and IPFS.",
+                "Learnt how to develop Generative AI NFTs on Ethereum, integrate account abstraction wallets, and IPFS.",
                 "Leveraged OpenAI API services for advanced AI applications."
             ],
-            img: "https://www.smallcap.ai/smallcaplogo.png" // ADD THIS
+            img: "https://www.smallcap.ai/smallcaplogo.png"
         },
         {
             title: "SEO & AI Blogging Intern",
             company: "Inspirit.AI",
             date: "Nov. 2023 – Jan. 2024",
             details: [
-                "Learned Search Engine Optimization under Stanford graduates, enhancing content marketing skills.",
-                "Authored weekly blog posts on AI to analyze SEO impact.",
-                "Engaged with leaders to refine SEO strategies, preparing for future career opportunities."
+                "Developed SEO skills under Stanford graduates; authored AI blog posts analyzing SEO performance.",
+                "Collaborated with industry leaders to refine SEO strategies for enhanced content marketing."
             ],
-            img: "https://hacktj.org/2021/static/media/inspiritai.ca0c8cca.png" // ADD THIS
+            img: "https://hacktj.org/2021/static/media/inspiritai.ca0c8cca.png"
         }
     ],
     "aus": [
         {
-            title: "Founder - The Artificial Intelligence Club",
+            title: "Founder & President – The Artificial Intelligence Club",
             company: "American University of Sharjah",
-            date: "Oct. 2023 – Jan. 2025",
+            date: "Oct. 2023 – May 2025",
             details: [
                 "Hosted numerous workshops explaining AI concepts and providing hands-on experience for AUS students.",
                 "Developed a fully functional AI-powered game about AI Concepts for Club Fair 2024."
             ],
-            img: "https://se-images.campuslabs.com/clink/images/811c4f83-90da-4707-b86e-b0180a5377ae92702064-5fc3-4030-9366-529a638bb0ad.png?preset=med-sq" // ADD THIS
+            img: "https://se-images.campuslabs.com/clink/images/811c4f83-90da-4707-b86e-b0180a5377ae92702064-5fc3-4030-9366-529a638bb0ad.png?preset=med-sq"
         },
         {
             title: "IT Student Worker – College of Engineering",
             company: "American University of Sharjah",
             date: "Sep. 2023 – May 2024",
             details: [
-                "Managed and maintained the university’s IT infrastructure, ensuring efficient operation of computers, servers, and network equipment.",
-                "Collaborated with IT professionals to deploy solutions, significantly improving the digital environment at AUS.",
-                "Resolved technical issues for faculty, staff, and students, improving campus-wide technology access."
+                "Maintained IT infrastructure; resolved 120+ technical issues improving campus technology reliability.",
+                "Partnered with IT teams to deploy solutions enhancing AUS's digital environment and network operations."
             ],
-            img: "https://auscse.com/main/images/banner_og.png" // ADD THIS
+            img: "https://auscse.com/main/images/banner_og.png"
         },
         {
-            title: "Technical Core Team Member - Google Developers Group",
+            title: "Technical Core Team Member – Google Developers Group",
             company: "American University of Sharjah",
             date: "Oct. 2024 – Present",
             details: [
                 "Collaborating with AUS students to organize Google-backed AI workshops and hackathons.",
                 "Hosted events to provide AUS students with hands-on experience in Google technologies."
             ],
-            img: "https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo_dark_2YZFc5k.png" // ADD THIS
+            img: "https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo_dark_2YZFc5k.png"
         }
     ]
 };
@@ -279,14 +299,18 @@ document.querySelectorAll(".experience-btn").forEach(button => {
 
 // Load Default Category on Page Load
 document.addEventListener("DOMContentLoaded", () => {
-    loadExperience("internships"); // Default category
+    loadExperience("current"); // Default to current role
 });
 
+// Updated certifications with new ones from CV
 const certifications = [
+    { name: "AWS Certified AI Practitioner", provider: "Amazon Web Services", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
     { name: "Deep Learning Specialization", provider: "DeepLearning.AI", img: "https://aihubtest-bucket.s3.eu-north-1.amazonaws.com/public/storage/images/6066/https---cdn.evbuc.com-images-125559383-317212851579-1-original.20210208-232017.png" },
     { name: "Machine Learning Specialization", provider: "Stanford / DeepLearning.AI", img: "https://logos-world.net/wp-content/uploads/2021/10/Stanford-Symbol.png" },
     { name: "Microsoft Azure AI Engineer Associate", provider: "Microsoft", img: "https://cdn.prod.website-files.com/5ee732bebd9839b494ff27cd/5eef3a3260847d0d2783a76d_Microsoft-Logo-PNG-Transparent-Image.png" },
     { name: "Microsoft Azure AI Fundamentals", provider: "Microsoft", img: "https://cdn.prod.website-files.com/5ee732bebd9839b494ff27cd/5eef3a3260847d0d2783a76d_Microsoft-Logo-PNG-Transparent-Image.png" },
+    { name: "7 Data Science Courses", provider: "DataCamp", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/datacamp/datacamp-original.svg" },
+    { name: "Gen AI, Prompt Engineering, MLOps, Kubernetes, AWS, GCP", provider: "Manifold AI Learning", img: "https://cdn-icons-png.flaticon.com/128/8637/8637099.png" },
     { name: "Google Data Analytics Professional Certificate", provider: "Google", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png" },
     { name: "Exploratory Data Analysis for Machine Learning", provider: "IBM", img: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
     { name: "Inspirit AI Ambassadors Program", provider: "Inspirit AI", img: "https://hacktj.org/2021/static/media/inspiritai.ca0c8cca.png" },
@@ -315,69 +339,70 @@ function loadCertifications() {
 // Load Certifications on Page Load
 document.addEventListener("DOMContentLoaded", loadCertifications);
 
+// Updated projects with exact descriptions from CV
 const projects = {
     "ai-projects": [
         {
             name: "OriginAI: Binary Multilingual MGT Detector",
-            description: "Fine-tuning XLM-RoBERTa with the LoRA adapter to classify AI-generated text in Bulgarian, Indonesian, and Russian."
+            description: "Fine-tuned the mGTE model with the LoRA adapter to accurately classify AI-generated text in any language using transfer learning."
         },
         {
             name: "Security Scripts as Stories",
-            description: "Leveraged LLMs (GPT, Gemini, Llama) to generate CAN bus attacks on a Raspberry Pi acting as an ECU, with real-time dashboard visualization."
+            description: "Leveraged three LLMs (GPT, Gemini, Llama) to generate CAN bus attacks on a Raspberry PI acting as an ECU and conduct intrusion detection. Developed a car dashboard UI to simultaneously show the real-time conversion of CAN bus messages to the car's speedometer and RPM meter."
         },
         {
             name: "Deepfake Detection",
-            description: "Developed a Binary Neural Network to classify AI-generated images for a Computer Vision project. F1-Score: 0.91."
+            description: "Used a Binary Neural Network to accurately classify AI-generated images for this Computer Vision Project. F1-Score: 0.91"
         },
         {
             name: "Garbage Classification",
-            description: "Classified household waste using an ML ensemble model and Deep Learning, extracting features using VGG16. F1-Score: 0.93."
+            description: "Classified household waste using several ML algorithms, an ML ensemble model, and a Deep Learning (Computer Vision) model. Extracted image features using VGG16 for ML models. F1-Score: 0.93"
         }
     ],
     "ai-models": [
         {
             name: "Medical Imaging AI Model",
-            description: "Interprets medical images like X-rays using deep learning, enhancing diagnostic precision for tumors and fractures."
+            description: "This AI model interprets medical images like X-rays using deep learning, enhancing diagnostic precision and speed for conditions such as tumours and fractures, improving patient outcomes."
         },
         {
             name: "Emotion Detection AI Model",
-            description: "Analyzes facial expressions, eye movements, and gestures to gauge emotions for customer sentiment analysis."
+            description: "This model gauges emotions by analyzing expressions, eye movements, and gestures, finding applications in customer sentiment analysis and human-computer interaction."
         },
         {
             name: "Fake News Detection AI Model",
-            description: "Uses NLP to assess linguistic patterns and sources to detect misinformation and improve media literacy."
+            description: "Employing NLP, this model assesses linguistic patterns and sources to identify misinformation, aiding in the fight against the spread of fake news and promoting media literacy."
         },
         {
             name: "Driver Distraction AI Model",
-            description: "Utilizes Facial Recognition to determine whether a driver is paying attention to the road."
+            description: "Utilizing Facial Recognition features, this model determined whether the driver was paying attention to the road or not."
         }
     ],
     "web-dev": [
         {
             name: "DARK Games Store",
-            description: "Developed a full-stack online game store using MySQL, Node.js, HTML, CSS, and JavaScript."
+            description: "Developed a Web Application for an online Games Store with complete Database functionality. Used HTML + CSS + JavaScript for creating the webpages and integrated the MySQL back-end using Node.js."
         },
         {
             name: "24/7 Laundromat",
-            description: "Built a React-based web app for an online laundry service with complete database functionality."
+            description: "Developed a React Web Application for an online Laundromat service with complete Database functionality. Used HTML + CSS + JavaScript for creating the webpages and integrated the MySQL back-end using Node.js."
         },
         {
             name: "CalendaFlow",
-            description: "Developed a simple Calendar web application using GitHub Pages for version control."
+            description: "Built a simple Calendar Web Application. Used Git for Version Control and to Deploy a Calendar through GitHub Pages."
         }
     ],
     "app-dev": [
         {
             name: "SpareHour",
-            description: "Developed a fully functional Java Mobile Application on Android Studio with a Firebase database, providing a list of common meeting times for teams."
+            description: "Developed a fully-functional Java Mobile Application on Android Studio with a Firebase database which provides a list of common meeting times for teams."
         },
         {
             name: "Game of Life",
-            description: "Designed a fully functional Game of Life simulation using Java and the Swing library. Implemented menus, resizable grids, and user-friendly buttons and sliders to simulate future generations."
+            description: "Designed a fully-functional Game of Life simulation using Java and the Swing library. Implemented menus, resizable grids, and user-friendly buttons and sliders to simulate future generations."
         },
         {
             name: "Hangman Game",
-            description: "Developed a user-friendly Hangman game using Python with complete MySQL integration. Features include a leaderboard, scoring, and user interaction."
+            description: "Developed a user-friendly Hangman game using Python with complete MySQL integration. It includes features like a leaderboard, scoring, and user interaction."
         }
     ]
 
@@ -415,15 +440,28 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProjects("ai-projects"); // Default category
 });
 
+// Updated awards with new wins from CV
 const awards = [
     {
-        title: "3rd Place Winner - Best Solution Champion",
-        event: "RTA X Alibaba Cloud Generative AI Hackathon",
-        date: "Oct. 2024",
-        details: "Created an interface that leveraged AI algorithms like XGBoost & DBScan to predict new Taxi Rank Locations within Dubai and developed an hour-based prediction system to estimate the number of taxis to be sent to each existing taxi rank and assess demand based on the region of Dubai at the chosen time."
+        title: "1st Place Winner – Blockathon: AI for Decentralized Autonomy 2025",
+        event: "Blockathon Competition",
+        date: "May 2025",
+        details: "Independently developed a production-grade Next.js travel planning AI web app with SUI blockchain features."
     },
     {
-        title: "Active Students’ Scholarship",
+        title: "6th Place Winner – DragonOil AI Hackathon II - GOTECH 2025",
+        event: "DragonOil AI Hackathon",
+        date: "Apr. 2025",
+        details: "Leveraged multiple AI algorithms to accurately estimate Surface network production flow behaviour."
+    },
+    {
+        title: "3rd Place Winner + Best Solution Champion",
+        event: "RTA X Alibaba Cloud Generative AI Hackathon",
+        date: "Oct. 2024",
+        details: "Created an interface leveraging AI algorithms (XGBoost & DBScan) to predict Dubai Taxi Rank locations and estimate hourly taxi demand."
+    },
+    {
+        title: "Active Students' Scholarship",
         event: "AUS (Office of Student Affairs)",
         date: "Jan. 2024 – May 2024",
         details: "Recognition for extensive participation in extra-curriculars and commitment in the CSE Department."
@@ -489,7 +527,7 @@ async function sendMessage() {
     // Extract resume text using PDF.js
     const resumeContent = await loadResumeText();
 
-    const personalDetails = "Adithya is a Computer Science student at AUS with a strong background in AI, Machine Learning, Web Dev, and Cybersecurity. He has worked on AI-based fraud detection, NLP models, and web automation. He is currently looking for opportunities in AI research and software engineering. Born and brought up in dubai, indian, birthday: june 14th, 2003.";
+    const personalDetails = "Adithya is currently an AI & Automation Software Engineer at Transmed Overseas Inc and pursuing his MS in AI & Data Science at University of Liverpool. He has a strong background in AI, Machine Learning, Web Dev, and Cybersecurity. He has worked on AI-based fraud detection, NLP models, and web automation. He recently won 1st place at Blockathon 2025 and has extensive experience in enterprise software development. Born and brought up in Dubai, Indian, birthday: June 14th, 2003.";
 
     const prompt = `You are an AI assistant that will talk to recruitment teams. Respond normally if the query is not related to me. Your job is to make sure that I get hired, but don't be annoying or repetitive. Be precise and to the point, do not use special characters or bold text. Don't mention "According to his resume", or "it appears that..". Answer in 150 words maximum. Here is Adithya's resume: ${resumeContent}\n\nAdditional Info: ${personalDetails}\n\nUser Question: ${userInput}`;
 
@@ -527,7 +565,7 @@ function displayMessage(text, className) {
 }
 
 async function loadResumeText() {
-    const pdfUrl = "Adithya_CV.pdf"; // Change this if your resume is stored elsewhere
+    const pdfUrl = "Adithya_Resume.pdf"; // Change this if your resume is stored elsewhere
 
     try {
         const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
@@ -573,4 +611,3 @@ async function callGemini(prompt) {
         return "Failed to contact the Gemini API.";
     }
 }
-
