@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adithya Krishnakumar — AI & Software Engineer based in Dubai. Building intelligent systems, ML models, and full-stack applications.">
+  <meta property="og:title" content="Adithya Krishnakumar — AI & Software Engineer">
+  <meta property="og:description" content="AI Engineer at Bahwan International Group. MS AI & Data Science. Hackathon winner. Building production AI systems.">
+  <meta property="og:image" content="favicon.png">
+  <title>Adithya Krishnakumar — AI & Software Engineer</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-[#030b18] text-slate-200 antialiased">
+
+  <!-- ─── Fixed Navigation ──────────────────────────────────── -->
+  <nav id="main-nav">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="text-white font-black text-xl tracking-tight">AK<span class="text-cyan-400">.</span></a>
+      <ul class="hidden md:flex items-center gap-7">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#awards" class="nav-link">Awards</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="Adithya_Resume.pdf" class="text-sm font-semibold px-5 py-2 rounded-lg bg-cyan-400/10 text-cyan-400 border border-cyan-400/25 hover:bg-cyan-400/20 transition-all duration-200" download>Resume ↗</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─────────────────────────────────────────────── -->
+  <section class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+    <div class="dot-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-ring hero-ring-1"></div>
+    <div class="hero-ring hero-ring-2"></div>
+    <div class="hero-ring hero-ring-3"></div>
+
+    <div class="hero-content relative z-10 text-center px-6 w-full max-w-5xl mx-auto pt-10">
+      <h1 class="hero-name text-[clamp(3.5rem,10vw,7rem)] font-black text-white leading-none tracking-tight mb-3">
+        Adithya<span class="text-cyan-400">.</span>
+      </h1>
+
+      <p id="hero-subtitle" class="text-slate-300 text-xl font-light mb-4 tracking-wide">AI & Software Engineer</p>
+
+      <!-- Taglines injected by JS -->
+      <div id="hero-taglines" class="mb-10 min-h-[1.5rem]"></div>
+
+      <!-- Stats row -->
+      <div class="flex flex-wrap justify-center gap-3 mb-11">
+        <div class="stat-pill"><span class="text-amber-400 font-bold">1st Place</span>&nbsp;·&nbsp;Blockathon 2025</div>
+        <div class="stat-pill"><span class="text-cyan-400 font-semibold">AI Engineer</span>&nbsp;·&nbsp;Bahwan Intl. Group</div>
+        <div class="stat-pill"><span class="text-white font-semibold">MS</span>&nbsp;·&nbsp;AI & Data Science · UoL</div>
+      </div>
+
+      <!-- CTAs -->
+      <div id="hero-ctas" class="flex gap-4 justify-center flex-wrap">
+        <a href="Adithya_Resume.pdf" class="cta-primary" download>Download CV</a>
+        <a href="#projects" class="cta-secondary">View Projects →</a>
+      </div>
+    </div>
+
+    <div class="hero-scanline"></div>
+    <div class="scroll-indicator">↓</div>
+  </section>
+
+  <!-- ─── About ─────────────────────────────────────────────── -->
+  <section id="about" class="py-24 px-6 bg-[#050d1a]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading">About Me</span>
+      <div class="heading-line"></div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2 space-y-4 fade-in">
+          <p class="text-slate-300 leading-relaxed">I'm an AI & Software Engineer building intelligent systems that solve real-world problems. Currently working as an <span class="text-white font-semibold">AI Engineer at Bahwan International Group</span> in Dubai, where I build production-grade AI pipelines, CRMs, and automation tools that process thousands of data points daily.</p>
+          <p class="text-slate-300 leading-relaxed">Pursuing a <span class="text-white font-semibold">Master of Science in AI & Data Science at the University of Liverpool</span>, building on my Bachelor's in Computer Science from AUS (minors in Data Science and Applied Mathematics).</p>
+          <p class="text-slate-400 leading-relaxed">My work spans Machine Learning, Deep Learning, Computer Vision, Large Language Models, full-stack web development, and enterprise AI integration. I've competed in and won multiple hackathons, founded the AI Club at AUS, and shipped production systems used at scale.</p>
+        </div>
+        <div class="space-y-4 fade-in" style="transition-delay: 0.1s">
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-cyan-400 text-xs font-mono tracking-wider uppercase mb-2">Current Role</p>
+            <p class="text-white font-semibold text-sm">AI Engineer</p>
+            <p class="text-slate-400 text-xs mt-1">Bahwan International Group · Dubai</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-cyan-400 text-xs font-mono tracking-wider uppercase mb-2">Education</p>
+            <p class="text-white font-semibold text-sm">MS AI & Data Science</p>
+            <p class="text-slate-400 text-xs mt-1">University of Liverpool (ongoing)</p>
+            <p class="text-white font-semibold text-sm mt-3">BSc Computer Science</p>
+            <p class="text-slate-400 text-xs mt-1">American University of Sharjah</p>
+          </div>
+          <div class="glass-card rounded-2xl p-5">
+            <p class="text-cyan-400 text-xs font-mono tracking-wider uppercase mb-2">Competitions</p>
+            <p class="text-white font-semibold text-sm">3× Hackathon Finalist</p>
+            <p class="text-slate-400 text-xs mt-1">1st · 3rd · 6th place finishes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Experience ────────────────────────────────────────── -->
+  <section id="experience" class="py-24 px-6 bg-[#030b18]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading">Experience</span>
+      <div class="heading-line"></div>
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="filter-btn experience-btn active" data-category="current">Current Role</button>
+        <button class="filter-btn experience-btn" data-category="internships">Past Roles</button>
+        <button class="filter-btn experience-btn" data-category="aus">AUS</button>
+      </div>
+      <div id="experience-container" class="grid grid-cols-1 lg:grid-cols-2 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ─── Certifications ────────────────────────────────────── -->
+  <section id="certifications" class="py-24 px-6 bg-[#050d1a]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading">Certifications & Programs</span>
+      <div class="heading-line"></div>
+      <div id="certifications-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ─── Projects ──────────────────────────────────────────── -->
+  <section id="projects" class="py-24 px-6 bg-[#030b18]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading">Projects</span>
+      <div class="heading-line"></div>
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="filter-btn project-btn active" data-category="ai-projects">AI Projects</button>
+        <button class="filter-btn project-btn" data-category="ai-models">AI Models</button>
+        <button class="filter-btn project-btn" data-category="web-dev">Web Development</button>
+        <button class="filter-btn project-btn" data-category="app-dev">App Development</button>
+      </div>
+      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ─── Skills ────────────────────────────────────────────── -->
+  <section id="skills" class="py-24 px-6 bg-[#050d1a]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading">Technical Skills</span>
+      <div class="heading-line"></div>
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="filter-btn section-btn active" data-category="languages">Languages</button>
+        <button class="filter-btn section-btn" data-category="frameworks">Frameworks</button>
+        <button class="filter-btn section-btn" data-category="devtools">Dev Tools</button>
+        <button class="filter-btn section-btn" data-category="libraries">Python Libraries</button>
+      </div>
+      <div id="skills-container" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ─── Awards ────────────────────────────────────────────── -->
+  <section id="awards" class="py-24 px-6 bg-[#030b18]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading section-heading--amber">Awards & Honors</span>
+      <div class="heading-line heading-line--amber"></div>
+      <div id="awards-container" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ─── Courses ───────────────────────────────────────────── -->
+  <section id="courses" class="py-24 px-6 bg-[#050d1a]">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-heading">Courses at AUS</span>
+      <div class="heading-line"></div>
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="filter-btn course-btn active" data-category="computer-science">Computer Science</button>
+        <button class="filter-btn course-btn" data-category="ai">Artificial Intelligence</button>
+        <button class="filter-btn course-btn" data-category="math">Mathematics</button>
+        <button class="filter-btn course-btn" data-category="others">Others</button>
+      </div>
+      <div id="courses-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"></div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ───────────────────────────────────────────── -->
+  <section id="contact" class="py-24 px-6 bg-[#030b18]">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-black text-white mb-3">Let's Connect</h2>
+      <div class="w-12 h-[3px] bg-cyan-400 rounded mx-auto mb-6"></div>
+      <p class="text-slate-300 text-lg mb-12">If you're building something with AI, let's talk.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+        <a href="tel:+971505017385" class="glass-card rounded-2xl p-6 flex flex-col items-center gap-3 no-underline transition-all duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+          </svg>
+          <div>
+            <p class="text-white font-semibold text-sm">+971 50 5017385</p>
+            <p class="text-slate-500 text-xs mt-1">Phone</p>
+          </div>
+        </a>
+
+        <a href="mailto:adithyakk2013@gmail.com" class="glass-card rounded-2xl p-6 flex flex-col items-center gap-3 no-underline transition-all duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+          </svg>
+          <div>
+            <p class="text-white font-semibold text-sm break-all">adithyakk2013@gmail.com</p>
+            <p class="text-slate-500 text-xs mt-1">Email</p>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/adithya-krishnakumar" target="_blank" rel="noopener" class="glass-card rounded-2xl p-6 flex flex-col items-center gap-3 no-underline transition-all duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <div>
+            <p class="text-white font-semibold text-sm">adithya-krishnakumar</p>
+            <p class="text-slate-500 text-xs mt-1">LinkedIn</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="py-8 px-6 bg-[#050d1a] border-t border-white/5 text-center">
+    <p class="text-slate-600 text-sm">© 2026 Adithya Krishnakumar</p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-top" title="Back to top">↑</button>
+
+</body>
+</html>
